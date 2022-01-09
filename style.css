@@ -1,0 +1,199 @@
+:root{
+  --Bright-orange: hsl(31, 77%, 52%);
+  --Dark-cyan: hsl(184, 100%, 22%);
+  --Very-dark-cyan: hsl(179, 100%, 13%);
+  --Transparent-white: hsla(0, 0%, 100%, 0.75);  /*paragraphs*/
+  --Very-light-gray : hsl(0, 0%, 95%);           /* background, headings, buttons) */
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 62.5%;    /*For ease of calculation in rem units- Default is 10px*/
+}
+
+body{
+  background-color: var(--Very-light-gray);
+  height: 100vh;
+  align-items: center;
+  font-size: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   /*Centres the contents in the middle*/
+}
+
+.container{
+  width: 80rem;
+  height: 45rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card{
+  padding: 5% 4%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sedan{
+  background-color: var(--Bright-orange);
+  border-start-start-radius: 20px;
+  border-end-start-radius: 20px;
+}
+
+.suv{
+  background-color: var(--Dark-cyan);
+}
+
+.luxury{
+  background-color: var(--Very-dark-cyan);
+  border-start-end-radius: 20px;
+  border-end-end-radius: 20px;
+}
+
+.icon{
+  width: 30%;
+}
+
+.card_title{
+  font-family: 'Big Shoulders Display', cursive;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--Very-light-gray);
+}
+.card-p{
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 400;
+  color: var(--Transparent-white);
+  line-height: 1.5;
+  padding-bottom: 6.0rem;
+}
+.card_btn{
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 400;
+  padding: 6% 10%;
+  border: none;
+  border-radius: 35px;
+  font-size: 1.4rem;
+}
+.sedan_btn{
+  color: var(--Bright-orange);
+}
+.suv_btn{
+  color: var(--Dark-cyan);
+}
+.luxury_btn{
+  var(--Very-dark-cyan);
+}
+
+/* Hover Effects  */
+.card_btn:hover{
+  background: Transparent;
+  pointer: cursor;
+  color: var(--Very-light-gray);
+  border: 0.2rem solid var(--Very-light-gray);
+}
+/* Attribution  */
+.attribution{
+  padding-top: 20px;
+  font-size: 1.2rem;
+}
+
+/* Adding Responsiveness */
+
+/* Medium sized screens  */
+
+@media (min-width: 641px) and (max-width:1040px){
+  .container{
+    max-width: 80%;
+    min-width: 64rem;
+    height: 70%;
+  }
+  .card_title{
+    font-size: 3.0rem;
+  }
+  .card-p{
+    font-size: 1.5rem;
+    line-height: 2.4rem;
+  }
+  .card_btn{
+    font-size: 1.4rem;
+    padding: 4% 8%;
+  }
+}
+
+/* Medium-sized screens */
+@media (min-width: 401px) and (max-width: 640px){
+.container{
+  max-width: 80%;
+  min-width: 40.1rem;
+  height: 60%;
+}
+.card_title{
+  font-size: 3.0rem;
+}
+.card-p{
+  font-size: 1.2rem;
+}
+.card_btn{
+  font-size: 1.2rem;
+  padding: 3% 5%;
+}
+.icon{
+  width: 3.6rem;
+}
+}
+/* Mobile devices and small screens */
+@media screen and (max-width: 400px){
+  /* .body{
+    display: flow-root;
+  } */
+  .container{
+    margin; auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    max-width: 60%;
+    min-width: 26rem;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    justify-items: start;
+    overflow: scroll;
+  }
+  .icon{
+    width: 2rem
+    padding-bottom: 2.5rem;
+  }
+  .card_title{
+    font-size: 2.5rem;
+    padding-top: 1.7rem;
+  }
+  .card-p{
+    font-size: 1.3rem;
+    padding-top: 2rem;
+  }
+  .card {
+  height: 34rem;
+  padding: 10% 8%;
+}
+  .sedan{
+    border-start-start-radius: 10px;
+    border-start-end-radius: 10px;
+    border-end-start-radius: 0;
+  }
+  .luxury{
+    border-start-end-radius: 0;
+    border-end-start-radius: 10px;
+    border-end-end-radius: 10px;
+  }
+  .card_btn{
+    width: 70%;
+    font-size: 1.2rem;
+    padding: 6% 9%;
+  }
+}
